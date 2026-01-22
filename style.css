@@ -615,3 +615,132 @@ h2 {
     font-size: 24px;
   }
 }
+
+.program-highlight {
+  position: relative;
+  padding: 120px 24px;
+  background: linear-gradient(
+    135deg,
+    #162f4d 0%,
+    #0b3c5d 100%
+  );
+  overflow: hidden;
+}
+
+.program-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(201, 179, 126, 0.12),
+      transparent 60%
+    );
+}
+
+.program-content {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  color: white;
+}
+
+.program-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.program-intro {
+  font-size: 18px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 32px;
+}
+
+.program-points {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.program-points li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,0.85);
+}
+
+.program-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background-color: #c9b37e;
+  border-radius: 50%;
+}
+
+.feature-highlight {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 24px;
+  background-image: url("images/program.jpg"); /* your image */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(11, 60, 93, 0.85),
+    rgba(11, 60, 93, 0.45),
+    rgba(11, 60, 93, 0.15)
+  );
+}
+
+.feature-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 56px 56px;
+  max-width: 520px;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  margin-left: 6%;
+}
+
+.feature-card h2 {
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #162f4d;
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.feature-note {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 900px) {
+  .feature-card {
+    margin-left: 0;
+    padding: 40px 32px;
+  }
+
+  .feature-highlight {
+    min-height: auto;
+    padding: 100px 24px;
+  }
+}
