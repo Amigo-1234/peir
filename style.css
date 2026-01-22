@@ -1098,3 +1098,105 @@ h2 {
 .impact-marquee:hover .marquee-track {
   animation-play-state: paused;
 }
+
+/* =====================
+   CONTACT SECTION
+===================== */
+
+.contact-section {
+  position: relative;
+  padding: 120px 24px;
+  background: linear-gradient(
+    to bottom,
+    #f5f7fa,
+    #eef2f7
+  );
+}
+
+.contact-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 64px 48px;
+  border-radius: 14px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.contact-header h2 {
+  font-size: 40px;
+  color: #162f4d;
+  margin-bottom: 16px;
+}
+
+.contact-header p {
+  font-size: 16px;
+  color: rgba(22, 47, 77, 0.75);
+  line-height: 1.7;
+}
+
+/* Form */
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(11, 60, 93, 0.2);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group textarea {
+  border-radius: 20px;
+  resize: none;
+}
+
+/* Focus */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0b3c5d;
+  box-shadow: 0 0 0 4px rgba(11, 60, 93, 0.1);
+}
+
+/* Button */
+.btn-primary {
+  margin-top: 12px;
+  align-self: center;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: none;
+  background-color: #0b3c5d;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(11, 60, 93, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-wrapper {
+    padding: 48px 24px;
+  }
+
+  .contact-header h2 {
+    font-size: 30px;
+  }
+}
