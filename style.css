@@ -148,6 +148,20 @@ h1, h2 {
   background: rgba(0, 0, 0, 0.45);
 }
 
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: -60px -60px -60px -60px ;
+  background: linear-gradient(
+    to right,
+    rgba(11, 60, 93, 0.55),
+    rgba(11, 60, 93, 0.15),
+    rgba(11, 60, 93, 0)
+  );
+  z-index: -1;
+  border-radius: 12px;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -168,8 +182,10 @@ h1, h2 {
 }
 
 .hero-content p {
-  font-size: 18px;
-  max-width: 600px;
+  font-size: 17px;
+  max-width: 420px;
+  margin-top: 8px;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
 }
 
@@ -387,21 +403,21 @@ h2 {
   position: relative;
 
   width: 100%;
-  max-width: 520px;
-  min-height: 240px;
-
-  margin-right: auto; /* pushes it to the left side */
+  max-width: 640px;
+  min-height: 260px;
+ /* pushes it to the left side */
 }
 
 
 .hero-slide {
   position: absolute;
   inset: 0;
+  pointer-events: none;
 
   opacity: 0;
-  transform: translateY(32px);
+  transform: translateY(16px);
 
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .hero-slide.active {
@@ -412,11 +428,11 @@ h2 {
 
 
 .hero-slide h1 {
-  font-size: 52px;
+  font-size: clamp(36px, 5vw, 54px);
   font-weight: 600;
   line-height: 1.05;
-  margin-bottom: 20px;
-  max-width: 520px;
+  margin-bottom: 12px;
+  max-width: 14ch;
 }
 
 .hero-slide p {
@@ -424,4 +440,178 @@ h2 {
   line-height: 1.6;
   max-width: 460px;
   color: rgba(255, 255, 255, 0.85);
+}
+
+.facilities {
+  background: linear-gradient(
+    to bottom,
+    #f5f7fa,
+    #eef2f7
+  );
+  padding: 100px 24px;
+}
+
+.facilities::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(11, 60, 93, 0.03),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.facilities-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.facilities h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #162f4d;
+  margin-bottom: 16px;
+}
+
+.facilities-intro {
+  max-width: 640px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(22, 47, 77, 0.75);
+  margin-bottom: 56px;
+}
+
+/* Grid */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.facility-card {
+  background: #ffffff;
+  border: 1px solid rgba(11, 60, 93, 0.12);
+  box-shadow: 0 12px 30px  rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 32px 28px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.facility-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0b3c5d;
+  margin-bottom: 10px;
+}
+
+.facility-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(22, 47, 77, 0.8);
+}
+
+/* Hover (subtle, professional) */
+.facility-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .facilities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facilities h2 {
+    font-size: 32px;
+  }
+}
+
+/* Facilities icons */
+.facility-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+/* Make cards clickable but clean */
+.facility-card {
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid rgba(11, 60, 93, 0.15);
+}
+
+.facility-card:focus {
+  outline: none;
+}
+
+/* CTA */
+.facilities-cta {
+  margin-top: 64px;
+  text-align: center;
+}
+
+/* Modal */
+.facility-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.facility-modal.active {
+  display: flex;
+}
+
+.facility-modal-content {
+  background: #ffffff;
+  max-width: 520px;
+  width: 90%;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeUp 0.4s ease;
+}
+
+.facility-modal-content h3 {
+  color: #0b3c5d;
+  margin-bottom: 12px;
+}
+
+.facility-modal-content p {
+  color: rgba(22, 47, 77, 0.85);
+  line-height: 1.6;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile polish */
+@media (max-width: 600px) {
+  .facility-card {
+    padding: 28px 22px;
+  }
+
+  .facility-icon {
+    font-size: 24px;
+  }
 }
