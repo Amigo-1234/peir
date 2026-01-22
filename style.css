@@ -1014,3 +1014,87 @@ h2 {
     justify-content: center;
   }
 }
+
+/* =====================
+   FOOTER EXTENSION MARQUEE
+===================== */
+
+.impact-marquee {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #162f4d 0%,
+    #0b3c5d 100%
+  );
+
+  /* THIS is the key part */
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Smooth fade from footer */
+.site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+.site-footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 47, 77, 0),
+    rgba(22, 47, 77, 1)
+  );
+}
+
+/* Marquee track */
+.marquee-track {
+  display: flex;
+  gap: 64px;
+  white-space: nowrap;
+  animation: marqueeScroll 28s linear infinite;
+  padding-left: 100%;
+}
+
+/* Items */
+.marquee-item {
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Animation */
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .impact-marquee {
+    min-height: 70vh;
+  }
+
+  .marquee-track {
+    gap: 40px;
+  }
+}
+
+.impact-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
