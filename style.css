@@ -685,7 +685,7 @@ h2 {
   display: flex;
   align-items: center;
   padding: 120px 24px;
-  background-image: url("images/program.jpg"); /* your image */
+  background-image: url("images/program1.jpg"); /* your image */
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -1198,5 +1198,142 @@ h2 {
 
   .contact-header h2 {
     font-size: 30px;
+  }
+}
+
+/* =====================
+   ABOUT PREVIEW
+===================== */
+
+.about-preview {
+  background: #f5f7fa;
+  padding: 100px 24px;
+}
+
+.about-preview-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-preview h2 {
+  font-size: 40px;
+  color: #162f4d;
+  margin-bottom: 20px;
+}
+
+.about-preview p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(22, 47, 77, 0.75);
+  margin-bottom: 16px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-preview h2 {
+    font-size: 30px;
+  }
+}
+
+.call-card {
+  background: linear-gradient(
+    135deg,
+    #0b3c5d 0%,
+    #162f4d 100%
+  );
+  padding: 120px 24px;
+}
+
+.call-card-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.call-card-images {
+  position: relative;
+}
+
+.call-card-images img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.call-card-images img:last-child {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 70%;
+}
+
+.call-card-content h2 {
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.call-card-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 28px;
+}
+
+.call-card-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .call-card-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .call-card-images img:last-child {
+    position: relative;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    margin-top: 24px;
+  }
+
+  .call-card-content h2 {
+    font-size: 32px;
+  }
+}
+
+/* Impact with image */
+.impact-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.impact-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .impact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .impact-image {
+    order: -1; /* image comes first on mobile */
   }
 }

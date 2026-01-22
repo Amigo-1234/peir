@@ -42,58 +42,63 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[current].classList.add("active");
   }, interval);
 });
-/* Facility modal */
+// =====================
+// SERVICES MODAL LOGIC
+// =====================
+
 const modal = document.getElementById("facilityModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalText = document.getElementById("modalText");
 const closeBtn = document.querySelector(".modal-close");
 
-const contentMap = {
-  sensory: {
-    title: "Sensory Room",
-    text:
-      "A controlled environment designed to support sensory regulation, relaxation, and emotional balance through tailored sensory experiences."
+const serviceContent = {
+  buying: {
+    title: "Buying & Selling",
+    text: "We guide clients through every stage of buying or selling property, ensuring informed decisions, strong negotiation, and smooth transactions."
   },
-  cinema: {
-    title: "Cinema Room",
-    text:
-      "A comfortable media space that supports shared experiences, social engagement, and recreational activities."
+  rentals: {
+    title: "Rentals & Leasing",
+    text: "From residential to commercial leasing, we connect the right tenants with the right properties through transparent and efficient processes."
   },
-  arts: {
-    title: "Arts & Crafts Area",
-    text:
-      "A creative space encouraging self-expression, confidence building, and fine motor skill development."
+  management: {
+    title: "Property Management",
+    text: "Our property management services protect your investment by handling tenants, maintenance, compliance, and reporting with professionalism."
   },
-  sports: {
-    title: "Sports & Recreational Area",
-    text:
-      "A flexible area promoting physical activity, coordination, and overall wellbeing through structured programs."
+  investment: {
+    title: "Investment Advisory",
+    text: "We provide market insights and strategic advice to help investors identify opportunities and maximize long-term property value."
   },
-  garden: {
-    title: "Garden Area",
-    text:
-      "An outdoor space supporting relaxation, light gardening activities, and connection with nature."
+  development: {
+    title: "Project & Land Development",
+    text: "Supporting land acquisition and development projects with planning insight, feasibility guidance, and execution support."
   },
-  lounge: {
-    title: "Lounge Room",
-    text:
-      "A shared social environment designed for rest, conversation, and informal interaction."
+  consultation: {
+    title: "Consultation & Valuation",
+    text: "Professional consultations and property valuations to support confident, data-driven real estate decisions."
   }
 };
 
-document.querySelectorAll(".facility-card").forEach((card) => {
+// Open modal
+document.querySelectorAll(".facility-card").forEach(card => {
   card.addEventListener("click", () => {
     const key = card.dataset.modal;
-    modalTitle.textContent = contentMap[key].title;
-    modalText.textContent = contentMap[key].text;
+    if (!serviceContent[key]) return;
+
+    modalTitle.textContent = serviceContent[key].title;
+    modalText.textContent = serviceContent[key].text;
+
     modal.classList.add("active");
+    document.body.style.overflow = "hidden";
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("active");
+// Close modal
+closeBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeModal();
 });
 
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.classList.remove("active");
-});
+function closeModal() {
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+}
