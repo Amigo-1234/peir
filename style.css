@@ -46,6 +46,18 @@ h1, h2 {
 }
 
 
+.logo {
+  height: 48px;          /* controls logo size */
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  display: block;
+  border-radius: 6px;    /* subtle, clean */
+}
 
 
 .nav-links a {
