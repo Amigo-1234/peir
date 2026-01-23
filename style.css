@@ -45,21 +45,28 @@ h1, h2 {
   color: #ffffff;
 }
 
+
 .logo {
   position: relative;
-  padding: 6px 10px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.15);
+  height: 48px;              /* controls box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(6px);
 }
 
 .logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
   display: block;
-  height: 35px;        /* or 40px */
-  width: auto;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
+/* glow */
 .logo::after {
   content: "";
   position: absolute;
@@ -70,8 +77,10 @@ h1, h2 {
     transparent 70%
   );
   z-index: -1;
-  border-radius: 10px;
+  border-radius: 12px;
 }
+
+
 
 
 .nav-links a {
