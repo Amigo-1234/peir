@@ -2072,6 +2072,104 @@ h2 {
   padding-top: 12px;
 }
 
+/* =====================
+   HEMERA INTERIORS
+===================== */
+
+.project-interior {
+  background: #ffffff;
+  padding: 120px 24px;
+}
+
+.project-interior-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.interior-header {
+  max-width: 640px;
+  margin-bottom: 64px;
+}
+
+.interior-header h2 {
+  font-size: 38px;
+  color: #162f4d;
+  margin-bottom: 16px;
+}
+
+.interior-header p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(22, 47, 77, 0.75);
+}
+
+/* Grid */
+.interior-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* Item */
+.interior-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.interior-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.interior-item span {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(22, 47, 77, 0.85);
+  color: #ffffff;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* Hover effect */
+.interior-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .interior-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .project-interior {
+    padding: 80px 20px;
+  }
+
+  .interior-header h2 {
+    font-size: 30px;
+  }
+
+  .interior-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .interior-item img {
+    height: 260px;
+  }
+}
+
+
 /* MEDIA SLIDER */
 .media-slider {
   width: 100%;
@@ -2967,3 +3065,4 @@ h2 {
     font-size: 15px;
   }
 }
+
