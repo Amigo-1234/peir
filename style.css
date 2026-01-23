@@ -2900,3 +2900,70 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =====================
+   INSIGHTS PREVIEW
+===================== */
+
+.insights-preview {
+  background: #ffffff;
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.insights-preview .section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.insights-preview h2 {
+  font-size: 40px;
+  color: #162f4d;
+  margin-bottom: 24px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.insights-preview p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(22, 47, 77, 0.8);
+  max-width: 680px;
+  margin: 0 auto 18px;
+}
+
+.insights-preview p:last-of-type {
+  margin-bottom: 36px;
+}
+
+/* CTA inherits btn-outline styling */
+.insights-preview .btn-outline {
+  padding: 14px 28px;
+}
+
+/* Subtle divider feel */
+.insights-preview::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: rgba(22, 47, 77, 0.15);
+  margin: 72px auto 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .insights-preview {
+    padding: 90px 20px;
+  }
+
+  .insights-preview h2 {
+    font-size: 30px;
+  }
+
+  .insights-preview p {
+    font-size: 15px;
+  }
+}
