@@ -102,3 +102,43 @@ function closeModal() {
   modal.classList.remove("active");
   document.body.style.overflow = "";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".media-slide");
+  const thumbs = document.querySelectorAll(".media-thumbs button");
+
+  if (!slides.length) return;
+
+  let activeIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      const video = slide.querySelector("video");
+
+      slide.classList.toggle("active", i === index);
+
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+
+    const activeSlide = slides[index];
+    const activeVideo = activeSlide.querySelector("video");
+
+    if (activeVideo) {
+      activeVideo.play().catch(() => {});
+    }
+
+    activeIndex = index;
+  }
+
+  thumbs.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      showSlide(index);
+    });
+  });
+
+  // Ensure first slide is visible
+  showSlide(0);
+});
