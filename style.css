@@ -1468,6 +1468,11 @@ h2 {
   background-position: center;
 }
 
+.blog-hero {
+  background-image: url("images/blog.jpg"); /* your image */
+  background-size: cover;
+  background-position: center;
+}
 /* Overlay */
 .page-hero-overlay {
   position: absolute;
@@ -2759,5 +2764,139 @@ h2 {
 
   .contact-info h2 {
     font-size: 32px;
+  }
+}
+
+
+.testimonials {
+  padding: 120px 24px;
+  background: #f5f7fa;
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 38px;
+  color: #162f4d;
+  margin-bottom: 56px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.testimonial-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: rgba(22,47,77,0.85);
+}
+
+.testimonial-card strong {
+  font-size: 14px;
+  color: #162f4d;
+}
+
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.property-gallery {
+  padding: 120px 24px;
+  background: #ffffff;
+}
+
+.gallery-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.property-gallery h2 {
+  font-size: 38px;
+  color: #162f4d;
+  margin-bottom: 40px;
+}
+
+.gallery-strip {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.gallery-strip img {
+  flex: 0 0 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+.insights {
+  padding: 120px 24px;
+  background: #f5f7fa;
+}
+
+.insights-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.insights h2 {
+  font-size: 38px;
+  color: #162f4d;
+  margin-bottom: 56px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.insight-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.insight-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #162f4d;
+}
+
+.insight-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(22,47,77,0.8);
+  margin-bottom: 16px;
+}
+
+.insight-card a {
+  color: #1a73e8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
   }
 }
