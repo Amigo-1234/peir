@@ -2460,3 +2460,149 @@ h2 {
     font-size: 30px;
   }
 }
+
+/* SECTION */
+.project-castle {
+  padding: 120px 24px;
+  background: #ffffff;
+}
+
+.project-castle-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.project-castle-header {
+  max-width: 700px;
+  margin-bottom: 56px;
+}
+
+.project-badge {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #c9b37e;
+  margin-bottom: 12px;
+}
+
+.project-castle-header h2 {
+  font-size: 42px;
+  color: #162f4d;
+  margin-bottom: 12px;
+}
+
+.project-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(22, 47, 77, 0.75);
+}
+
+/* GRID */
+.project-castle-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+/* CONTENT */
+.project-castle-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(22, 47, 77, 0.85);
+  margin-bottom: 20px;
+}
+
+.project-features {
+  padding-left: 18px;
+  margin-bottom: 24px;
+}
+
+.project-features li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #162f4d;
+}
+
+.project-meta {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(22, 47, 77, 0.8);
+}
+
+/* IMAGE */
+.project-castle-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+}
+
+/* IMAGE STRIP */
+.project-castle-strip {
+  overflow: hidden;
+  margin: 40px 0 56px;
+}
+
+.strip-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: castleScroll 26s linear infinite;
+}
+
+.strip-track img {
+  width: 240px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+  flex-shrink: 0;
+}
+
+.project-castle-strip:hover .strip-track {
+  animation-play-state: paused;
+}
+
+@keyframes castleScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* FOOTER NOTE */
+.project-note {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(22, 47, 77, 0.65);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .project-castle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-castle-image img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-castle-header h2 {
+    font-size: 32px;
+  }
+
+  .strip-track img {
+    width: 180px;
+    height: 120px;
+  }
+}
