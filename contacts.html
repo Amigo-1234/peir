@@ -75,78 +75,146 @@
   </div>
 </section>
 
-<section class="contact-page reveal">
-  <div class="contact-page-inner">
 
-    <!-- LEFT: INFO -->
-    <div class="contact-info">
-      <span class="section-label">Get in Touch</span>
-      <h2>Talk to Akmazoo</h2>
+<div class="primary-contact-card reveal">
 
-      <p>
-        Whether you’re buying, selling, or exploring investment opportunities,
-        our team is ready to guide you with clarity and confidence.
-      </p>
 
-      <ul class="contact-details">
-        <li>
-          <strong>Phone:</strong>
-          <a href="tel:+2349155554757">+234 915 555 4757</a>
-        </li>
-        <li>
-          <strong>Phone:</strong>
-          <a href="tel:+2348035309967">+234 803 530 9967</a>
-        </li>
-        <li>
-          <strong>Email:</strong>
-          <a href="mailto:eloho@akmazoo.com">eloho@akmazoo.com</a>
-        </li>
-        <li>
-          <strong>Email:</strong>
-          <a href="mailto:omoniyi@akmazoo.com">omoniyi@akmazoo.com</a>
-        </li>
-        <li>
-          <strong>Office:</strong>
-          <span>6B Akintunde Adeyemi Drive, Lekki Phase 1, Lagos</span>
-        </li>
-      </ul>
+  <div class="contact-person-info">
+    <h3>Omoniyi Akmazoo</h3>
+    <span class="contact-role">Executive Director</span>
+
+    <p>
+      For all property enquiries, consultations, and investments,
+      speak directly with our lead representative.
+    </p>
+
+    <div class="contact-actions">
+      <a href="tel:+2349155554757" class="btn-outline">
+        Call Now
+      </a>
+
+      <a
+        href="https://wa.me/2349155554757"
+        target="_blank"
+        class="btn-primary"
+      >
+        WhatsApp →
+      </a>
     </div>
+  </div>
 
-    <!-- RIGHT: FORM -->
-    <form class="contact-form">
-      <div class="form-group">
-        <input type="text" placeholder="Your Name" required />
+</div>
+
+<section class="team-contact reveal">
+  <div class="team-contact-inner">
+
+    <h2>Get in Touch With Our Team</h2>
+    <p class="team-contact-sub">
+      For specific inquiries, you can also reach members of our leadership team directly.
+    </p>
+
+    <div class="team-contact-cards">
+
+      <!-- Jennifer -->
+      <div class="team-card">
+        <h3>Jennifer Inaboya</h3>
+        <span class="team-role">Head of Brand & Marketing</span>
+
+        <a href="tel:+2348166458599" class="team-phone">
+          +234 816 645 8599
+        </a>
       </div>
 
-      <div class="form-group">
-        <input type="email" placeholder="Your Email" required />
+      <!-- Bisola -->
+      <div class="team-card">
+        <h3>Bisola Islamiyah</h3>
+        <span class="team-role">Head of Admin & Customer Care</span>
+
+        <a href="tel:+2348144853231" class="team-phone">
+          +234 814 485 3231
+        </a>
       </div>
 
-      <div class="form-group">
-        <input type="tel" placeholder="Your Phone" />
-      </div>
-
-      <div class="form-group">
-        <select required>
-          <option value="">Type of Inquiry</option>
-          <option>Buying</option>
-          <option>Selling</option>
-          <option>Rental</option>
-          <option>Investment</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <textarea rows="4" placeholder="Your Message"></textarea>
-      </div>
-
-      <button type="submit" class="btn-primary">
-        Send Message →
-      </button>
-    </form>
-
+    </div>
   </div>
 </section>
+
+
+<form class="contact-form" id="contactForm">
+
+  <div class="form-group">
+    <input
+      type="text"
+      id="contact-name"
+      name="name"
+      placeholder="Your Name"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <input
+      type="email"
+      id="contact-email"
+      name="email"
+      placeholder="Your Email"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <input
+      type="tel"
+      id="contact-phone"
+      name="phone"
+      placeholder="Your Phone"
+    />
+  </div>
+
+  <div class="form-group">
+    <select
+      id="contact-inquiry"
+      name="inquiry"
+      required
+    >
+      <option value="">Type of Inquiry</option>
+      <option value="Buying">Buying</option>
+      <option value="Selling">Selling</option>
+      <option value="Rental">Rental</option>
+      <option value="Investment">Investment</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <textarea
+      id="contact-message"
+      name="message"
+      rows="4"
+      placeholder="Your Message"
+      required
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="btn-primary"
+    id="contact-submit"
+  >
+    Send Message →
+  </button>
+
+</form>
+
+
+<a
+  href="https://wa.me/2349155554757"
+  class="floating-contact"
+  aria-label="Chat on WhatsApp"
+  target="_blank"
+>
+  💬
+</a>
+
 
 
 
