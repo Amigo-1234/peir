@@ -1474,6 +1474,11 @@ h2 {
   background-size: cover;
   background-position: center;
 }
+.testimonial-hero {
+  background-image: url("images/testimoials.jpg"); /* your image */
+  background-size: cover;
+  background-position: center;
+}
 /* Overlay */
 .page-hero-overlay {
   position: absolute;
@@ -3386,5 +3391,106 @@ h2 {
 
   .completed-projects h2 {
     font-size: 32px;
+  }
+}
+
+/* TESTIMONIALS PAGE */
+.testimonials-page {
+  padding: 120px 24px;
+  background: #f5f7fa;
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-page h2 {
+  font-size: 40px;
+  color: #162f4d;
+  margin-bottom: 16px;
+}
+
+.testimonials-intro {
+  font-size: 16px;
+  color: rgba(22, 47, 77, 0.75);
+  max-width: 640px;
+  margin: 0 auto 64px;
+  line-height: 1.7;
+}
+
+/* Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+.testimonial-card {
+  background: #ffffff;
+  padding: 40px 36px;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.testimonial-card::before {
+  content: "“";
+  position: absolute;
+  top: -24px;
+  left: 28px;
+  font-size: 80px;
+  color: rgba(201, 179, 126, 0.25);
+  font-family: serif;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+}
+
+/* Text */
+.testimonial-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(22, 47, 77, 0.85);
+  margin-bottom: 28px;
+}
+
+/* Author */
+.testimonial-author strong {
+  display: block;
+  font-size: 17px;
+  color: #162f4d;
+}
+
+.testimonial-author span {
+  font-size: 14px;
+  color: rgba(22, 47, 77, 0.6);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .testimonials-page {
+    padding: 90px 20px;
+  }
+
+  .testimonials-page h2 {
+    font-size: 32px;
+  }
+
+  .testimonial-card {
+    padding: 32px 26px;
   }
 }
