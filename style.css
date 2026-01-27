@@ -3561,3 +3561,265 @@ h2 {
   }
 }
 
+
+/* =========================
+   HEMERA MAIN MEDIA
+========================= */
+
+.hemera-media img,
+.hemera-media video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 520px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+  display: block;
+  background: #000;
+}
+
+/* =========================
+   HEMERA SIDE VIEWS
+========================= */
+
+.hemera-side-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.hemera-side-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hemera-side-grid img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================
+   HEMERA INTERIORS
+========================= */
+
+.hemera-interior-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.hemera-interior-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hemera-interior-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.hemera-section {
+  padding: 120px 24px;
+  background: #ffffff;
+}
+
+.hemera-section + .hemera-section {
+  padding-top: 0;
+}
+
+
+/* ===============================
+   HEMERA SHOWCASE SECTION
+=============================== */
+
+.hemera-showcase {
+  padding: 120px 24px;
+  background: #ffffff;
+}
+
+.hemera-showcase-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   MAIN (VIDEO / FRONT VIEW)
+=============================== */
+
+.hemera-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+
+/* Media container */
+.hemera-media {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+}
+
+.hemera-media video,
+.hemera-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Intro content */
+.hemera-intro .section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.hemera-intro h2 {
+  font-size: 44px;
+  color: #162f4d;
+  margin-bottom: 14px;
+}
+
+.hemera-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(22,47,77,0.8);
+  margin-bottom: 28px;
+}
+
+.hemera-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   SIDE / EXTERIOR VIEWS
+=============================== */
+
+.hemera-side-views {
+  margin-bottom: 96px;
+}
+
+.hemera-side-views h3 {
+  font-size: 28px;
+  color: #162f4d;
+  margin-bottom: 28px;
+}
+
+.hemera-side-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hemera-side-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease;
+}
+
+.hemera-side-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ===============================
+   INTERIOR VIEWS
+=============================== */
+
+.hemera-interiors {
+  margin-bottom: 40px;
+}
+
+.hemera-interiors h3 {
+  font-size: 28px;
+  color: #162f4d;
+  margin-bottom: 28px;
+}
+
+.hemera-interior-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.hemera-interior-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease;
+}
+
+.hemera-interior-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 1024px) {
+  .hemera-main {
+    grid-template-columns: 1fr;
+  }
+
+  .hemera-media {
+    height: 420px;
+  }
+
+  .hemera-interior-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hemera-showcase {
+    padding: 90px 20px;
+  }
+
+  .hemera-intro h2 {
+    font-size: 32px;
+  }
+
+  .hemera-media {
+    height: 300px;
+  }
+
+  .hemera-side-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hemera-side-grid img {
+    height: 240px;
+  }
+
+  .hemera-interior-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hemera-interior-grid img {
+    height: 220px;
+  }
+}
